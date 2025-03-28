@@ -58,6 +58,8 @@ migrate_working_dir/
 .pub/
 /build/
 pubspec.lock
+.metadata
+build.yaml
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -73,10 +75,23 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Platform specific
+/android/
+/ios/
+/linux/
+/macos/
+/windows/
+/web/
+
 # Firebase
 google-services.json
 GoogleService-Info.plist
 firebase-debug.log
 firebase-debug.*.log
-firebase-debug.log.*
-firebase-debug.*.log.*
+.firebase/
+firebase.json
+functions/
+
+# Test
+/test/
+/coverage/
