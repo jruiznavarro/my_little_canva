@@ -1,12 +1,8 @@
-import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
-import '../../domain/entities/user.dart';
 import '../../domain/failures/auth_failure.dart';
 import '../../domain/repositories/auth_repository.dart';
-import '../models/user_model.dart';
 import '../services/auth_service.dart';
 import 'package:flutter/material.dart';
 

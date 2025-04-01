@@ -2,12 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:my_little_canva/features/auth/presentation/pages/login_page.dart';
-import 'package:my_little_canva/features/auth/presentation/pages/home_page.dart';
-import 'package:my_little_canva/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+        apiKey: "AIzaSyD60kCn87nmdJcBW_PGntRXMymWOaxAr0U",
+        authDomain: "my-little-canva.firebaseapp.com",
+        projectId: "my-little-canva",
+        storageBucket: "my-little-canva.appspot.com",
+        messagingSenderId: "272425255050",
+        appId: "1:272425255050:web:fff8cbd2a0eea40f77ed73",
+      ),
+    );
+  } else {
+    await Firebase.initializeApp();
+  }
+  
   runApp(const ProviderScope(child: MyApp()));
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_little_canva/features/auth/presentation/controllers/auth_controller.dart';
-import 'package:my_little_canva/features/auth/presentation/pages/admin_page.dart';
+import 'package:my_little_canva/features/admin/presentation/pages/admin_page.dart';
 import 'package:my_little_canva/features/auth/domain/entities/user_role.dart';
 import 'package:my_little_canva/features/auth/presentation/pages/inventory_page.dart';
 import 'package:my_little_canva/features/auth/presentation/pages/learn_to_paint_page.dart';
